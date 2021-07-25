@@ -14,6 +14,7 @@ ___
 * Ability to remove and create folders as well as list the contents of folders
 * Sin, cos, tan and square rooting capabilities
 * Advanced version of 'print()' with error and warning messages
+* Ability to get a randomized item from an array
 ___
 ## Used Libraries
 * [datetime](https://docs.python.org/3/library/datetime.html)

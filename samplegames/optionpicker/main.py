@@ -32,6 +32,12 @@ class skel():
     def listDir(path):
         return os.listdir(path)
 
+    # Outputs the entirety of a file
+    def readFile(path):
+        file = open(path, "r")
+        print(file.read())
+        file.close()
+
     # Square Root Calculator
     def squareRoot(num1):
         return print(math.sqrt(num1))
@@ -73,10 +79,10 @@ class skel():
     def randNum(num1, num2):
         return print(random.randint(num1, num2))
 
-    # Gets a random element from an array
-    def randElement(arrayname):
+    # Gets a random item from an array
+    def randItem(arrayname):
         return print(random.choice(arrayname))
-    
+
     # Randomized Key Generator
     def generateKey(type="uuid4", numOfChars=12):
         if type == "uuid4" or type == 4:
