@@ -76,7 +76,7 @@ class skel():
     # Gets a random element from an array
     def randElement(arrayname):
         return print(random.choice(arrayname))
-
+    
     # Randomized Key Generator
     def generateKey(type="uuid4", numOfChars=12):
         if type == "uuid4" or type == 4:
