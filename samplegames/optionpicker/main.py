@@ -77,11 +77,11 @@ class skel():
 
     # Random Number Generator
     def randNum(num1, num2):
-        return print(random.randint(num1, num2))
+        return random.randint(num1, num2)
 
     # Gets a random item from an array
     def randItem(arrayname):
-        return print(random.choice(arrayname))
+        return random.choice(arrayname)
 
     # Randomized Key Generator
     def generateKey(type="uuid4", numOfChars=12):

@@ -14,7 +14,7 @@ if choiceamount == "2":
     player_chosen_options = [str(userinput1), str(userinput2)]
 
     # Gets a random item from player_chosen_options
-    skel.randItem(player_chosen_options)
+    print(skel.randItem(player_chosen_options))
 elif choiceamount == "3":
     userinput1 = skel.requestUserInput("Give an option. ")
     userinput2 = skel.requestUserInput("Give another option. ")
@@ -24,7 +24,7 @@ elif choiceamount == "3":
     player_chosen_options = [str(userinput1), str(userinput2), str(userinput3)]
 
     # Gets a random item from player_chosen_options
-    skel.randItem(player_chosen_options)
+    print(skel.randItem(player_chosen_options))
 elif choiceamount == "4":
     userinput1 = skel.requestUserInput("Give an option. ")
     userinput2 = skel.requestUserInput("Give another option. ")
@@ -35,7 +35,7 @@ elif choiceamount == "4":
     player_chosen_options = [str(userinput1), str(userinput2), str(userinput3), str(userinput4)]
 
     # Gets a random item from player_chosen_options
-    skel.randItem(player_chosen_options)
+    print(skel.randItem(player_chosen_options))
 elif choiceamount == "5":
     userinput1 = skel.requestUserInput("Give an option. ")
     userinput2 = skel.requestUserInput("Give another option. ")
@@ -46,6 +46,6 @@ elif choiceamount == "5":
     player_chosen_options = [str(userinput1), str(userinput2), str(userinput3), str(userinput4), str(userinput5)]
 
     # Gets a random item from player_chosen_options
-    skel.randItem(player_chosen_options)
+    print(skel.randItem(player_chosen_options))
 else:
     print("That isn't a valid amount. Valid amounts: 2, 3, 4, 5.")
