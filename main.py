@@ -11,9 +11,9 @@ class skel():
         if type == "log" or type == "l" or type == 1:
             return print(text)
         elif type == "warning" or type == "warn" or type == "w" or type == 2:
-            return print("Warning: " + text)
+            return print(f"Warning: {text}")
         elif type == "error" or type == "e" or type == 3:
-            return print("Error: " + text)
+            return print(f"Error: {text}")
         else:
             return print("Invalid parameters.")
 
@@ -73,7 +73,7 @@ class skel():
     # Time
     def getTime():
         ctime = datetime.datetime.now()
-        return print("The time is " + ctime.strftime("%y/%m/%d %H:%M"))
+        return print(f"The time is {ctime.strftime('%y/%m/%d %H:%M')}")
 
     # Random Number Generator
     def randNum(num1, num2):
@@ -86,7 +86,7 @@ class skel():
     # Randomized Key Generator
     def generateKey(type="uuid4", numOfChars=12):
         if type == "uuid4" or type == 4:
-            return print("UUID4: " + str(uuid.uuid4()))
+            return print(f"UUID4: {str(uuid.uuid4())}")
         elif type == "hextoken":
             return print(secrets.token_hex(numOfChars))
         else:
