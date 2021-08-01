@@ -35,40 +35,41 @@ class skel():
     # Outputs the entirety of a file
     def readFile(path):
         file = open(path, "r")
-        print(file.read())
+        filecontents = file.read()
         file.close()
+        return filecontents
 
     # Square Root Calculator
     def squareRoot(num1):
-        return print(math.sqrt(num1))
+        return math.sqrt(num1)
 
     # Sin Calculator
     def sin(num1):
-        return print(math.sin(num1))
+        return math.sin(num1)
 
     # Cos Calculator
     def cos(num1):
-        return print(math.cos(num1))
+        return math.cos(num1)
 
     # Tan Calculator
     def tan(num1):
-        return print(math.tan(num1))
+        return math.tan(num1)
 
     # Radian Calculator
     def radians(num1):
-        return print(math.radians(num1))
+        return math.radians(num1)
 
     # Degrees Calculator
     def degrees(num1):
-        return print(math.degrees(skel.pi/num1))
+        return math.degrees(skel.pi/num1)
 
     # Euler (e) value
     def Euler():
-        return print(math.e)
+        return math.e
 
     # PI function
     def PI():
-        return print(math.pi)
+        return math.pi
 
     # Time
     def getTime():
