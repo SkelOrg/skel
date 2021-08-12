@@ -13,4 +13,4 @@ userguess = skel.requestUserInput("I'm thinking of a number between 1 and 10. Wh
 if userguess == str(randomnumber):
     print("You guessed correctly!")
 else:
-    print("You lost! The number was " + str(randomnumber) + ".")
+    print(f"You lost! The number was {str(randomnumber)}.")

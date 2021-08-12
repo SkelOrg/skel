@@ -1,5 +1,7 @@
 # skel - Python Library
 A Python library containing features from other great libraries, all in one!
+
+The library is personal and was only made so it would help me work on my own projects faster.
 ___
 ## Index
 * [Usage](#usage)
