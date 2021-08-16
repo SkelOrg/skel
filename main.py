@@ -21,15 +21,15 @@ class skel():
     def editFile(path = None, type = None, text = None):
         if type == "append" or "1" or "a":
             file = open(path, "a")
-            file.write(f"{text}\n)
+            file.write(f"{text}\n")
             file.close()
         elif type == "write" or "w" or "2" or "overwrite":
             file = open(path, "w")
-            file.write(f"{text})
+            file.write(f"{text}")
             file.close()
         elif type == "x" or "create" or "createfile" or "3":
             file = open(path, "x")
-            file.write(f"{text})
+            file.write(f"{text}")
             file.close()
 
     # PI value
