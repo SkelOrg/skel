@@ -108,6 +108,7 @@ class skel():
         else:
             return print("The 'type' parameter given is invalid.")
 
+    # Mathmatical operator (4 operations)
     def calculate(num1 = 9, operation = "add", num2 = 3, printresult = True):
         # Multiply operator (x or *)
         if operation == "x" or operation == "*" or operation == "X" or operation == "times" or operation == "times by" or operation == "multiplied by":
