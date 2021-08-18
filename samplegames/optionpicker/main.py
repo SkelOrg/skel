@@ -108,21 +108,45 @@ class skel():
         else:
             return print("The 'type' parameter given is invalid.")
 
-    # Addition Operator (+)
-    def add(num1 = 9, num2 = 3):
-        return print(num1 + num2)
+    def calculate(num1 = 9, operation = "add", num2 = 3, printresult = True):
+        # Multiply operator (x or *)
+        if operation == "x" or operation == "*" or operation == "X" or operation == "times" or operation == "times by" or operation == "multiplied by":
+            if printresult == True:
+                return print(num1 * num2)
+            elif printresult == False:
+                return num1 * num2
+            else:
+                print(f"You didn't specify 'True' or 'False'. Your given parameter was '{printresult}'.")
 
-    # Addition Operator (-)
-    def subtract(num1 = 9, num2 = 3):
-        return print(num1 - num2)
+        # Subtract operator (-)
+        elif operation == "takeaway" or operation == "take away" or operation == "minus" or operation == "-" or operation == "subtracted by":
+            if printresult == True:
+                return print(num1 - num2)
+            elif printresult == False:
+                return num1 - num2
+            else:
+                print(f"You didn't specify 'True' or 'False'. Your given parameter was '{printresult}'.")
 
-    # Multiplication Operator (x)
-    def multiply(num1 = 9, num2 = 3):
-        return print(num1 * num2)
+        # Division operator (÷)
+        elif operation == "divided by" or operation == "÷" or operation == "//":
+            if printresult == True:
+                return print(num1 // num2)
+            elif printresult == False:
+                return num1 // num2
+            else:
+                print(f"You didn't specify 'True' or 'False'. Your given parameter was '{printresult}'.")
 
-    # Division Operator (÷)
-    def divide(num1 = 9, num2 = 3):
-        return print(num1 // num2)
+        # Addition operator (+)
+        elif operation == "plus" or operation == "+" or operation == "add":
+            if printresult == True:
+                return print(num1 + num2)
+            elif printresult == False:
+                return num1 + num2
+            else:
+                print(f"You didn't specify 'True' or 'False'. Your given parameter was '{printresult}'.")
+
+        else:
+            print(f"That isn't an operation. Your given operation was '{operation}'.")
 
     # Request user to input anything
     def requestUserInput(text = None):
