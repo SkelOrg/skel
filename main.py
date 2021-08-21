@@ -19,15 +19,15 @@ class skel():
 
     # Function for appending (to), overwriting or creating files
     def editFile(path = None, type = None, text = None):
-        if type == "append" or "1" or "a":
+        if type == "append" or type == "1" or type == "a":
             file = open(path, "a")
             file.write(f"{text}\n")
             file.close()
-        elif type == "write" or "w" or "2" or "overwrite":
+        elif type == "write" or type == "w" or "2" or type == "overwrite":
             file = open(path, "w")
             file.write(f"{text}")
             file.close()
-        elif type == "x" or "create" or "createfile" or "3":
+        elif type == "x" or type == type == "create" or type == "createfile" or type == "3":
             file = open(path, "x")
             file.write(f"{text}")
             file.close()
