@@ -95,6 +95,16 @@ class skel():
     def randNum(num1, num2):
         return random.randint(num1, num2)
 
+    # Number Formatter
+    def formatNum(num=1000, printResult=True):
+        formattednumber = "{:,}".format(num)
+        if printResult == True:
+            print(formattednumber)
+        elif printResult == False:
+            return formattednumber
+        else:
+            return print("The 'printResult' parameter is invalid.")
+
     # Gets a random item from an array
     def randItem(arrayname):
         return random.choice(arrayname)
