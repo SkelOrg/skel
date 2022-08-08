@@ -9,26 +9,26 @@ from sys import stdin, stdout
 class skel():
     # Advanced version of print()
     def createLine(text, type="log"):
-        if type == "log" or type == "l" or type == 1:
-            return stdout.write(text + "\n")
-        elif type == "warning" or type == "warn" or type == "w" or type == 2:
+        if type in ["log", "l", 1]:
+            return stdout.write(f"{text}\n")
+        elif type in ["warning", "warn", "w", 2]:
             return stdout.write(f"Warning: {text}\n")
-        elif type == "error" or type == "e" or type == 3:
+        elif type in ["error", "e", 3]:
             return stdout.write(f"Error: {text}\n")
         else:
             return stdout.write("Invalid parameters.\n")
 
     # Function for appending (to), overwriting or creating files
     def editFile(path = None, type = None, text = None):
-        if type == "append" or type == "1" or type == "a":
+        if type in ["append", "a", 1]:
             file = open(path, "a")
             file.write(f"{text}\n")
             file.close()
-        elif type == "write" or type == "w" or "2" or type == "overwrite":
+        elif type in ["write",  "overwrite", "w", 2]:
             file = open(path, "w")
             file.write(f"{text}")
             file.close()
-        elif type == "x" or type == type == "create" or type == "createfile" or type == "3":
+        elif type in ["create", "createfile", "x", 3]:
             file = open(path, "x")
             file.write(f"{text}")
             file.close()
@@ -100,7 +100,7 @@ class skel():
     def formatNum(num=1000, printResult=True):
         formattednumber = "{:,}".format(num)
         if printResult == True:
-            stdout.write(formattednumber + "\n")
+            stdout.write(f"{formattednumber}\n")
         elif printResult == False:
             return formattednumber
         else:
@@ -112,46 +112,46 @@ class skel():
 
     # Randomized Key Generator
     def generateKey(type="uuid4", numOfChars=12):
-        if type == "uuid4" or type == 4:
+        if type in ["uuid4", 4]:
             return stdout.write(f"UUID4: {str(uuid4())}\n")
-        elif type == "hextoken":
-            return stdout.write(token_hex(numOfChars) + "\n")
+        elif type in ["hextoken", "hex"]:
+            return stdout.write(f"{token_hex(numOfChars)}\n")
         else:
             return stdout.write("The 'type' parameter given is invalid.\n")
 
     # Mathmatical operator (4 operations)
     def calculate(num1 = 9, operation = "add", num2 = 3, printresult = True):
         # Multiply operator (x or *)
-        if operation == "x" or operation == "*" or operation == "X" or operation == "times" or operation == "times by" or operation == "multiplied by":
+        if operation in ["x", "*", "X", "times", "times by", "multiplied by"]:
             if printresult == True:
-                return stdout.write(num1 * num2 + "\n")
+                return stdout.write(f"{num1 * num2}\n")
             elif printresult == False:
                 return num1 * num2
             else:
                 stdout.write(f"You didn't specify 'True' or 'False'. Your given parameter was '{printresult}'.\n")
 
         # Subtract operator (-)
-        elif operation == "takeaway" or operation == "take away" or operation == "minus" or operation == "-" or operation == "subtracted by":
+        elif operation in["takeaway", "take away", "minus", "-", "subtracted by"]:
             if printresult == True:
-                return stdout.write(num1 - num2 + "\n")
+                return stdout.write(f"{num1 - num2}\n")
             elif printresult == False:
                 return num1 - num2
             else:
                 stdout.write(f"You didn't specify 'True' or 'False'. Your given parameter was '{printresult}'.\n")
 
         # Division operator (÷)
-        elif operation == "divided by" or operation == "÷" or operation == "//":
+        elif operation in ["divided by", "÷", "//"]:
             if printresult == True:
-                return stdout.write(num1 // num2 + "\n")
+                return stdout.write(f"{num1 // num2}"\n")
             elif printresult == False:
                 return num1 // num2
             else:
                 stdout.write(f"You didn't specify 'True' or 'False'. Your given parameter was '{printresult}'.\n")
 
         # Addition operator (+)
-        elif operation == "plus" or operation == "+" or operation == "add":
+        elif operation in ["plus", "+", "add"]:
             if printresult == True:
-                return stdout.write(num1 + num2 + "\n")
+                return stdout.write(f"{num1 + num2}\n")
             elif printresult == False:
                 return num1 + num2
             else:
